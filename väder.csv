@@ -1,0 +1,14 @@
+Datum,Plats,Temperatur,Nederbörd,Vindstyrka
+2024-01-01,Stockholm,3,0,5
+2024-01-01,Göteborg,5,1,3
+2024-01-01,Malmö,10,2,2
+2024-01-01,Uppsala,2,0,4
+2024-01-01,Linköping,4,2,3
+2024-01-01,Karlstad,1,0,4
+2024-01-01,Umeå,0,0,3
+2024-01-01,Luleå,-2,0,5
+2024-01-01,Borås,3,1,3
+2024-01-01,Helsingborg,5,2,2
+2024-01-01,Lund,4,2,3
+2024-01-01,Halmstad,3,1,5
+
