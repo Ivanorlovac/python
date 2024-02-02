@@ -12,7 +12,7 @@ def ladda_vaderdata():
 
 # Funktion för att analysera temperaturdata
 def analysera_data(data, plats1, plats2):
-    data_plats1 = data[data['Plats'] == plats1] #Denna rad skapar en ny DataFrame data_plats1 från den ursprungliga data DataFrame. Den använder en villkorsuttryck data['Plats'] == plats1 för att filtrera och behålla endast de rader där värdet i kolumnen 'Plats' matchar variabeln plats1. Detta innebär att data_plats1 innehåller alla rader från data som hör till den första platsen användaren vill jämföra.
+    data_plats1 = data[data['Plats'] == plats1] # Skapar en ny DataFrame  från den ursprungliga data DataFrame.
     data_plats2 = data[data['Plats'] == plats2]
     medel_temp_plats1 = np.mean(data_plats1['Temperatur'])
     medel_temp_plats2 = np.mean(data_plats2['Temperatur'])
