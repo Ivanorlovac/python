@@ -42,7 +42,7 @@ def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats
     ax[0].set_title('Temperaturjämförelse') # Dessa rader sätter en etikett för y-axeln och en titel för den första subploten, vilket specificerar att det handlar om jämförelse av medeltemperatur.
 
     # Nederbörd
-    ax[1].bar([plats1, plats2], [medel_nederbord_plats1, medel_nederbord_plats2], color=['green', 'lightgreen'])
+    ax[1].bar([plats1, plats2], [medel_nederbord_plats1, medel_nederbord_plats2], color=['green', 'lightgreen']) # Skapar en andra stapeldiagram på den andra axeln (ax[1]) för att visa jämförelse av medelnederbörd. Färgerna är här gröna och ljusgröna.
     ax[1].set_ylabel('Medelnederbörd')
     ax[1].set_title('Nederbördsjämförelse')
 
