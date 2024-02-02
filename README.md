@@ -23,17 +23,17 @@ Användningen av `if __name__ == "__main__":` mönster säkerställer att applik
 
 Lista över städer du kan jämföra:
 
-Stockholm
-Göteborg
-Malmö
-Uppsala
-Linköping
-Karlstad
-Umeå
-Luleå
-Borås
-Helsingborg
-Lund
-Halmstad
+Stockholm,
+Göteborg,
+Malmö,
+Uppsala,
+Linköping,
+Karlstad,
+Umeå,
+Luleå,
+Borås,
+Helsingborg,
+Lund,
+Halmstad.
 
 Programmet ber dig först ange namnet på den första staden och sedan namnet på den andra.
