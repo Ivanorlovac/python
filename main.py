@@ -22,8 +22,10 @@ def analysera_data(data, plats1, plats2):
 
 # Funktion för att jämföra nederbörd och vindstyrka mellan två platser
 def analysera_nederbord_vind(data, plats1, plats2):
-    data_plats1 = data[data['Plats'] == plats1]
-    data_plats2 = data[data['Plats'] == plats2]
+    data_plats1 = data[data['Plats'] == plats1] # Denna rad skapar en ny DataFrame data_plats1 som innehåller endast
+    # rader från den ursprungliga data DataFrame där värdena i kolumnen 'Plats' matchar plats1.
+    data_plats2 = data[data['Plats'] == plats2] # På liknande sätt filtrerar denna rad data DataFrame för att skapa
+    # en ny DataFrame data_plats2 som endast innehåller rader där värdet i kolumnen 'Plats' är lika med plats2.
     medel_nederbord_plats1 = np.mean(data_plats1['Nederbörd'])
     medel_nederbord_plats2 = np.mean(data_plats2['Nederbörd'])
     medel_vindstyrka_plats1 = np.mean(data_plats1['Vindstyrka'])
