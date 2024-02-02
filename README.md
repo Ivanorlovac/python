@@ -21,4 +21,19 @@ Applikationen är strukturerad runt flera funktioner som var och en ansvarar fö
 Användningen av `if __name__ == "__main__":` mönster säkerställer att applikationen kan köras som ett fristående skript samtidigt som den tillåter att dess delar kan importeras och återanvändas i andra Python-skript.
 
 
+Lista över städer du kan jämföra:
 
+Stockholm
+Göteborg
+Malmö
+Uppsala
+Linköping
+Karlstad
+Umeå
+Luleå
+Borås
+Helsingborg
+Lund
+Halmstad
+
+Programmet ber dig först ange namnet på den första staden och sedan namnet på den andra.
