@@ -34,7 +34,7 @@ def analysera_nederbord_vind(data, plats1, plats2):
 def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats1, medel_nederbord_plats2,
                      medel_vindstyrka_plats1, medel_vindstyrka_plats2, plats1, plats2):
     # Skapar flera barplots för att jämföra olika parametrar
-    fig, ax = plt.subplots(3, 1, figsize=(8, 12))
+    fig, ax = plt.subplots(3, 1, figsize=(8, 12)) # skapar en figur (fig) och ett array av axlar (ax) för att rymma tre subplots (grafiska områden). Argumentet 3, 1 anger att det ska finnas tre rader och en kolumn av grafer, vilket innebär att graferna ordnas vertikalt.Figsize=(8, 12) definierar storleken på hela figuren i tum (bredd, höjd).
 
     # Temperatur
     ax[0].bar([plats1, plats2], [medel_temp_plats1, medel_temp_plats2], color=['blue', 'lightblue'])
