@@ -51,8 +51,9 @@ def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats
     ax[2].set_ylabel('Medelvindstyrka') # Sätter etiketten för y-axeln och titeln för den tredje subploten, vilket indikerar att det är en jämförelse av vindstyrka.
     ax[2].set_title('Vindstyrkejämförelse') # Sätter etiketten för y-axeln och titeln för den tredje subploten, vilket indikerar att det är en jämförelse av vindstyrka.
 
-    plt.tight_layout()
-    plt.show()
+    plt.tight_layout() # Justerar subplots inom figuren så att det inte blir någon överlappning mellan axlarnas titlar, etiketter, etc.
+    plt.show() # Visar den slutliga figuren med de tre subplotarna.
+# Denna kodsektion är ansvarig för att skapa en visuellt tilltalande och informativ representation av den analyserade väderdatan, med separata grafer för temperatur, nederbörd och vindstyrka.
 
 
 # Huvudfunktionen för applikationen
