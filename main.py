@@ -47,9 +47,9 @@ def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats
     ax[1].set_title('Nederbördsjämförelse') # Sätter etiketten för y-axeln och titeln för den andra subploten, indikerande att det är en jämförelse av nederbörd.
 
     # Vindstyrka
-    ax[2].bar([plats1, plats2], [medel_vindstyrka_plats1, medel_vindstyrka_plats2], color=['red', 'pink'])
-    ax[2].set_ylabel('Medelvindstyrka')
-    ax[2].set_title('Vindstyrkejämförelse')
+    ax[2].bar([plats1, plats2], [medel_vindstyrka_plats1, medel_vindstyrka_plats2], color=['red', 'pink']) # Skapar en tredje stapeldiagram på den tredje axeln (ax[2]) för att visa jämförelse av medelvindstyrka. Staplarna är färgade i rött och rosa.
+    ax[2].set_ylabel('Medelvindstyrka') # Sätter etiketten för y-axeln och titeln för den tredje subploten, vilket indikerar att det är en jämförelse av vindstyrka.
+    ax[2].set_title('Vindstyrkejämförelse') # Sätter etiketten för y-axeln och titeln för den tredje subploten, vilket indikerar att det är en jämförelse av vindstyrka.
 
     plt.tight_layout()
     plt.show()
