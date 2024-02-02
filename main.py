@@ -67,7 +67,7 @@ def huvudfunktion():
      medel_vindstyrka_plats2) = analysera_nederbord_vind(data, plats1, plats2)
 
     visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbörd_plats1, medel_nederbörd_plats2,
-                     medel_vindstyrka_plats1, medel_vindstyrka_plats2, plats1, plats2)
+                     medel_vindstyrka_plats1, medel_vindstyrka_plats2, plats1, plats2) # Slutligen anropas funktionen visualisera_data med alla beräknade medelvärden och de två valda platserna som argument. Denna funktion skapar och visar de grafiska visualiseringarna av datan som stapeldiagram, där varje graf representerar medelvärden för temperatur, nederbörd och vindstyrka för de två platserna.
 
 
 # Kör huvudfunktionen
