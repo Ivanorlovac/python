@@ -62,8 +62,8 @@ def huvudfunktion():
     plats2 = input("Ange andra platsen för jämförelse: ") # På samma sätt som ovan, ber denna rad användaren att mata in namnet på den andra platsen för jämförelse av väderdata. Det inmatade värdet sparas i variabeln plats2.
 
     data = ladda_vaderdata() # Här anropas funktionen ladda_vaderdata() som läser in väderdata från  CSV-fil och lagrar datan i variabeln data.
-    medel_temp_plats1, medel_temp_plats2 = analysera_data(data, plats1, plats2)
-    (medel_nederbörd_plats1, medel_nederbörd_plats2, medel_vindstyrka_plats1,
+    medel_temp_plats1, medel_temp_plats2 = analysera_data(data, plats1, plats2) # Denna rad anropar funktionen analysera_data, som tar den inlästa datan och de två valda platserna som argument. Funktionen returnerar medeltemperaturen för varje plats, vilka lagras i medel_temp_plats1 och medel_temp_plats2.
+    (medel_nederbörd_plats1, medel_nederbörd_plats2, medel_vindstyrka_plats1, # Här anropas funktionen analysera_nederbord_vind, som också tar den inlästa datan och de två valda platserna som argument. Den returnerar medelvärdet för nederbörd och vindstyrka för båda platserna.
      medel_vindstyrka_plats2) = analysera_nederbord_vind(data, plats1, plats2)
 
     visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbörd_plats1, medel_nederbörd_plats2,
