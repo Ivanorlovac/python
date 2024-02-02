@@ -16,17 +16,14 @@ def analysera_data(data, plats1, plats2):
     data_plats2 = data[data['Plats'] == plats2] # På samma sätt som ovan, skapar denna rad en ny DataFrame data_plats2
     medel_temp_plats1 = np.mean(data_plats1['Temperatur']) # Berä. med.vär. av tem. för pl.1 np.mean-fun. fr. NumPy-bib.
     medel_temp_plats2 = np.mean(data_plats2['Temperatur']) # På ett liknande sätt som ovan, berä.medeltemp. för pl.2
-    return medel_temp_plats1, medel_temp_plats2 # Slutligen returnerar denna rad de beräknade
-    # genomsnittstemperaturerna för både plats1 och plats2 som ett par värden.
+    return medel_temp_plats1, medel_temp_plats2 # Slutligen returnerar denna rad de beräknaden genomsnittstemperaturerna för både plats1 och plats2 som ett par värden.
 
 
 # Funktion för att jämföra nederbörd och vindstyrka mellan två platser
 def analysera_nederbord_vind(data, plats1, plats2):
-    data_plats1 = data[data['Plats'] == plats1] # Denna rad skapar en ny DataFrame data_plats1 som innehåller endast
-    # rader från den ursprungliga data DataFrame där värdena i kolumnen 'Plats' matchar plats1.
-    data_plats2 = data[data['Plats'] == plats2] # På liknande sätt filtrerar denna rad data DataFrame för att skapa
-    # en ny DataFrame data_plats2 som endast innehåller rader där värdet i kolumnen 'Plats' är lika med plats2.
-    medel_nederbord_plats1 = np.mean(data_plats1['Nederbörd'])
+    data_plats1 = data[data['Plats'] == plats1] # Denna rad skapar en ny DataFrame data_plats1 som innehåller endast rader från den ursprungliga data DataFrame där värdena i kolumnen 'Plats' matchar plats1.
+    data_plats2 = data[data['Plats'] == plats2] # På liknande sätt filtrerar denna rad data DataFrame för att skapa en ny DataFrame data_plats2 som endast innehåller rader där värdet i kolumnen 'Plats' är lika med plats2.
+    medel_nederbord_plats1 = np.mean(data_plats1['Nederbörd']) # Denna rad beräknar genomsnittet av nederbördsmängden  för plats1. Genom att använda np.mean funktionen från NumPy-biblioteket, räknar den ut medelvärdet av alla  värden i kolumnen 'Nederbörd' i data_plats1
     medel_nederbord_plats2 = np.mean(data_plats2['Nederbörd'])
     medel_vindstyrka_plats1 = np.mean(data_plats1['Vindstyrka'])
     medel_vindstyrka_plats2 = np.mean(data_plats2['Vindstyrka'])
