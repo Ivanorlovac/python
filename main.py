@@ -58,8 +58,8 @@ def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats
 
 # Huvudfunktionen för applikationen
 def huvudfunktion():
-    plats1 = input("Ange första platsen för jämförelse: ")
-    plats2 = input("Ange andra platsen för jämförelse: ")
+    plats1 = input("Ange första platsen för jämförelse: ") # Denna rad tar in användarinput genom att visa en prompt "Ange första platsen för jämförelse:". Användaren ska skriva in namnet på den första platsen som de vill jämföra väderdata för. Det inmatade värdet sparas i variabeln plats1.
+    plats2 = input("Ange andra platsen för jämförelse: ") # På samma sätt som ovan, ber denna rad användaren att mata in namnet på den andra platsen för jämförelse av väderdata. Det inmatade värdet sparas i variabeln plats2.
 
     data = ladda_vaderdata()
     medel_temp_plats1, medel_temp_plats2 = analysera_data(data, plats1, plats2)
