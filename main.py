@@ -37,9 +37,9 @@ def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats
     fig, ax = plt.subplots(3, 1, figsize=(8, 12)) # skapar en figur (fig) och ett array av axlar (ax) för att rymma tre subplots (grafiska områden). Argumentet 3, 1 anger att det ska finnas tre rader och en kolumn av grafer, vilket innebär att graferna ordnas vertikalt.Figsize=(8, 12) definierar storleken på hela figuren i tum (bredd, höjd).
 
     # Temperatur
-    ax[0].bar([plats1, plats2], [medel_temp_plats1, medel_temp_plats2], color=['blue', 'lightblue'])
-    ax[0].set_ylabel('Medeltemperatur')
-    ax[0].set_title('Temperaturjämförelse')
+    ax[0].bar([plats1, plats2], [medel_temp_plats1, medel_temp_plats2], color=['blue', 'lightblue']) # Denna rad skapar en stapeldiagram (bar plot) på den första axeln (ax[0]). Den jämför medeltemperaturen (medel_temp_plats1 och medel_temp_plats2) för de två valda platserna. Färgerna för staplarna definieras som blå och ljusblå.
+    ax[0].set_ylabel('Medeltemperatur') #  Dessa rader sätter en etikett för y-axeln och en titel för den första subploten, vilket specificerar att det handlar om jämförelse av medeltemperatur.
+    ax[0].set_title('Temperaturjämförelse') # Dessa rader sätter en etikett för y-axeln och en titel för den första subploten, vilket specificerar att det handlar om jämförelse av medeltemperatur.
 
     # Nederbörd
     ax[1].bar([plats1, plats2], [medel_nederbord_plats1, medel_nederbord_plats2], color=['green', 'lightgreen'])
