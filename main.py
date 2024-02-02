@@ -13,8 +13,8 @@ def ladda_vaderdata():
 # Funktion för att analysera temperaturdata
 def analysera_data(data, plats1, plats2):
     data_plats1 = data[data['Plats'] == plats1] # Skapar en ny DataFrame  från den ursprungliga data DataFrame.
-    data_plats2 = data[data['Plats'] == plats2]
-    medel_temp_plats1 = np.mean(data_plats1['Temperatur'])
+    data_plats2 = data[data['Plats'] == plats2] # På samma sätt som ovan, skapar denna rad en ny DataFrame data_plats2
+    medel_temp_plats1 = np.mean(data_plats1['Temperatur']) # Berä. med.vär. av tem. för pl.1 np.mean-fun. fr. NumPy-bib.
     medel_temp_plats2 = np.mean(data_plats2['Temperatur'])
     return medel_temp_plats1, medel_temp_plats2
 
