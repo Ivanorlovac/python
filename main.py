@@ -25,9 +25,9 @@ def analysera_nederbord_vind(data, plats1, plats2):
     data_plats2 = data[data['Plats'] == plats2] # På liknande sätt filtrerar denna rad data DataFrame för att skapa en ny DataFrame data_plats2 som endast innehåller rader där värdet i kolumnen 'Plats' är lika med plats2.
     medel_nederbord_plats1 = np.mean(data_plats1['Nederbörd']) # Denna rad beräknar genomsnittet av nederbördsmängden  för plats1. Genom att använda np.mean funktionen från NumPy-biblioteket, räknar den ut medelvärdet av alla  värden i kolumnen 'Nederbörd' i data_plats1
     medel_nederbord_plats2 = np.mean(data_plats2['Nederbörd']) # På samma sätt som ovan, beräknar denna rad genomsnittet av nederbördsmängden för plats2 genom att ta medelvärdet av alla värden i kolumnen 'Nederbörd' i data_plats2. medel_nederbörd_plats2 blir således den genomsnittliga nederbördsmängden för den andra platsen.
-    medel_vindstyrka_plats1 = np.mean(data_plats1['Vindstyrka'])
-    medel_vindstyrka_plats2 = np.mean(data_plats2['Vindstyrka'])
-    return (medel_nederbord_plats1, medel_nederbord_plats2, medel_vindstyrka_plats1, medel_vindstyrka_plats2)
+    medel_vindstyrka_plats1 = np.mean(data_plats1['Vindstyrka']) # Denna rad beräknar medelvindstyrkan för plats1. Precis som tidigare används np.mean för att beräkna genomsnittet av värdena i kolumnen 'Vindstyrka' i data_plats1. Resultatet, medel_vindstyrka_plats1, representerar den genomsnittliga vindstyrkan för den första platsen.
+    medel_vindstyrka_plats2 = np.mean(data_plats2['Vindstyrka']) # Liksom de tidigare raderna beräknar denna rad medelvindstyrkan för plats2 genom att ta medelvärdet av värdena i kolumnen 'Vindstyrka' i data_plats2. medel_vindstyrka_plats2 indikerar den genomsnittliga vindstyrkan för den andra platsen.
+    return (medel_nederbord_plats1, medel_nederbord_plats2, medel_vindstyrka_plats1, medel_vindstyrka_plats2) # Slutligen returnerar denna rad en tuple med de beräknade medelvärdena för nederbörd och vindstyrka för de två valda platserna. Dessa värden kan sedan användas för ytterligare analys eller visualisering i andra delar av programmet.
 
 
 # Uppdaterad visualiseringsfunktion
