@@ -43,8 +43,8 @@ def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats
 
     # Nederbörd
     ax[1].bar([plats1, plats2], [medel_nederbord_plats1, medel_nederbord_plats2], color=['green', 'lightgreen']) # Skapar en andra stapeldiagram på den andra axeln (ax[1]) för att visa jämförelse av medelnederbörd. Färgerna är här gröna och ljusgröna.
-    ax[1].set_ylabel('Medelnederbörd')
-    ax[1].set_title('Nederbördsjämförelse')
+    ax[1].set_ylabel('Medelnederbörd') # Sätter etiketten för y-axeln och titeln för den andra subploten, indikerande att det är en jämförelse av nederbörd.
+    ax[1].set_title('Nederbördsjämförelse') # Sätter etiketten för y-axeln och titeln för den andra subploten, indikerande att det är en jämförelse av nederbörd.
 
     # Vindstyrka
     ax[2].bar([plats1, plats2], [medel_vindstyrka_plats1, medel_vindstyrka_plats2], color=['red', 'pink'])
