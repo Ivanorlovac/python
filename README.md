@@ -41,3 +41,5 @@ Programmet ber dig först ange namnet på den första staden och sedan namnet p�
 Alla kommentarer finns i main.py
 
 Jag använde Jupyter Notebook för att styra layouten på tabellerna.
+
+Du måste installera pandas, numpy och matplotlib för att kunna köra main.py
