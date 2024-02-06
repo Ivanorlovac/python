@@ -37,3 +37,5 @@ Lund,
 Halmstad.
 
 Programmet ber dig först ange namnet på den första staden och sedan namnet på den andra.
+
+Alla kommentarer finns i main.py
