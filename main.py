@@ -58,8 +58,25 @@ def visualisera_data(medel_temp_plats1, medel_temp_plats2, medel_nederbord_plats
 
 # Huvudfunktionen för applikationen
 def huvudfunktion():
-    plats1 = input("Ange första platsen för jämförelse: ") # Denna rad tar in användarinput genom att visa en prompt "Ange första platsen för jämförelse:". Användaren ska skriva in namnet på den första platsen som de vill jämföra väderdata för. Det inmatade värdet sparas i variabeln plats1.
-    plats2 = input("Ange andra platsen för jämförelse: ") # På samma sätt som ovan, ber denna rad användaren att mata in namnet på den andra platsen för jämförelse av väderdata. Det inmatade värdet sparas i variabeln plats2.
+    data = ladda_vaderdata()  # Ladda in datan
+    platser = set(data['Plats'])  # Skapa en mängd av alla unika platser i datan
+
+    while True:
+        plats1 = input("Ange första platsen för jämförelse: ") # Detta inleder en oändlig loop som ber användaren att mata in namnet på den första platsen de vill jämföra. Loopen kommer att fortsätta tills ett giltigt avbrott inträffar (via break).
+        if plats1 not in platser:
+            print("Platsen finns inte i datan. Försök igen.") # Om den plats som användaren angivit inte finns i mängden platser (och därmed inte finns i datasetet), informeras användaren om detta och continue-satsen hoppar över resten av koden i den aktuella iterationen av loopen och startar nästa iteration från början. Detta ger användaren en ny chans att ange en giltig plats.
+            continue  # Om platsen inte finns, börja om loopen
+        break  # Bryt loopen om platsen finns # Om platsen som användaren angivit finns i mängden platser, avbryts loopen med break, och koden fortsätter till nästa steg. Det innebär att plats1 är en giltig plats för jämförelse.
+
+    while True:
+        plats2 = input("Ange andra platsen för jämförelse: ") # En ny oändlig loop inleds för att be användaren ange den andra platsen för jämförelse. Processen liknar den för den första platsen.
+        if plats2 not in platser:
+            print("Platsen finns inte i datan. Försök igen.") # Återigen kontrolleras om den angivna andra platsen finns i mängden platser. Om inte, informeras användaren och loopen startas om för att ge en ny chans att ange en giltig plats.
+            continue  # Om platsen inte finns, börja om loopen
+        if plats2 == plats1:
+            print("Ange en annan plats än den första. Försök igen.") # Denna kontroll säkerställer att den andra platsen inte är densamma som den första platsen. Om de är samma uppmanas användaren att välja en annan plats, och loopen startas om.
+            continue  # Undvik att välja samma plats för båda jämförelserna
+        break  # Bryt loopen om platsen finns och är olika plats1
 
     data = ladda_vaderdata() # Här anropas funktionen ladda_vaderdata() som läser in väderdata från  CSV-fil och lagrar datan i variabeln data.
     medel_temp_plats1, medel_temp_plats2 = analysera_data(data, plats1, plats2) # Denna rad anropar funktionen analysera_data, som tar den inlästa datan och de två valda platserna som argument. Funktionen returnerar medeltemperaturen för varje plats, vilka lagras i medel_temp_plats1 och medel_temp_plats2.
